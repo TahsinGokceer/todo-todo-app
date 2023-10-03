@@ -1,38 +1,148 @@
 .App {
-  text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	flex-direction: column;
+	min-height: 100vh;
+	background-color: #f2b8c6;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Form */
+.form{
+	width: 40%;
+	margin-bottom: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.title{
+	width: 100%;
+	font-size: 10rem;
+	color: #bc8592;
+	margin: 0 auto;
+	text-align: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.input{
+	display: block;
+	margin: 10px auto 0;
+	width: 81%;
+	border: none;
+	padding: 20px 30px;
+	font-size: 25px;
+	border-bottom: 1px solid #333;
+
 }
 
-.App-link {
-  color: #61dafb;
+.input:focus{
+	outline: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Content */
+.content{
+	width: 40%;
+	margin: 0;
+}
+
+.content ul{
+	padding: 0;
+	margin: 0 auto;
+	width: 90%;
+	list-style-type: none;
+}
+
+.content ul li{
+	padding: 15px 15px;
+	background-color: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.content li button{
+	background-color: transparent;
+	border: 1px solid #333;
+	cursor: pointer;
+	border-radius: 50%;
+	width: 35px;
+	height: 35px;
+	margin-right: 10px;
+}
+
+.content li button span{
+	display: none;
+}
+
+.content li button.delete{
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+	border-radius: 0;
+	color: rgb(255, 106, 106);
+	font-size: 1.2rem;
+}
+
+.content li button.delete:hover{
+	color: red;
+	font-size: 1.4rem;
+}
+
+.content li button.checked {
+	border-radius: 50%;
+	font-size: 1.4rem;
+}
+
+.content li button.checked span{
+	display: initial;
+	color: rgb(7, 212, 17);
+}
+
+.content li .todos{
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+.content li .todo{
+	font-size: 25px;
+}
+
+.content li .todo.checked{
+	text-decoration: line-through;
+	opacity: 0.6;
+}
+
+/* Content Footer */
+.content-footer{
+	width: 90%;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: #fff;
+	border-top: 1px solid #333;
+	/* padding: 0 10px; */
+}
+
+.content-footer .left{
+	width: 70%;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.content-footer button{
+	margin-right: 8px;
+	background-color: transparent;
+	border: none;
+	padding: 3px 13px;
+	cursor: pointer;
+}
+
+.content-footer .left button{
+	margin-right: 1px;
+}
+
+
+button.selected{
+	border: 1px solid #333;
+	background-color: #eee;
 }
